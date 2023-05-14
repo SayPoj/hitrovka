@@ -26,3 +26,11 @@ window.addEventListener('click', function (e) {
   if (!maxLoc) maxLoc = 0
   if (num > maxLoc) Cookies.set('location', num)
 })
+
+
+window.addEventListener('click', function (e) {
+  const link = e.target.closest('.restart-link')
+  if (!link) return
+  Cookies.set('location', 0)
+  localStorage.removeItem('selectedHero')
+})

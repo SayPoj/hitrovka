@@ -122,8 +122,8 @@ const changeDialogNochlejka = () => {
   function changeText() {
     nochlejkaDialog.textContent = texts[currentIndex];
     if(currentIndex + 1 === texts.length) {
-      console.log(document.querySelector('.card_dialog-text-container .ticket-link'))
       document.querySelector('.card_dialog-text-container .ticket-link').style.display = 'block'
+      document.querySelector('.card_dialog-text-container .restart-link').style.display = 'block'
     }
 
     if (currentIndex === texts.length - 1) {
@@ -220,8 +220,15 @@ fetch(url)
 
 
 radjiItem.forEach(item => {
-  item.onmouseover = function (){
-    item.classList.add('found')
-    radjiBlock.style.display = 'flex'
+  if('ontouchstart' in window || navigator.msMaxTouchPoints){
+    item.onclick = function (){
+      item.classList.add('found')
+      radjiBlock.style.display = 'flex'
+    }
+  } else {
+    item.onmouseover = function (){
+      item.classList.add('found')
+      radjiBlock.style.display = 'flex'
+    }
   }
 })

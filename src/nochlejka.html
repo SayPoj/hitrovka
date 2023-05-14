@@ -19,7 +19,13 @@
         <p class="card_subtitle nochlejka_subtitle"></p>
       </div>
       <div class="card_videoblock desktop">
-        <iframe src="https://www.youtube.com/embed/qAhBAJ5E0Qs"></iframe>
+        <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none';this.nextElementSibling.querySelector('iframe').src='https://www.youtube.com/embed/qAhBAJ5E0Qs'">
+          <img src="/img/nochlejka/Rectangle8.webp" style="cursor:pointer" />
+          <img class="play" src="./img/Vector.svg" alt="img">
+        </div>
+        <div style="display:none; width: 100%;">
+          <iframe></iframe>
+        </div>
       </div>
     </div>
     <div class="nochlejka_kontent">
@@ -29,12 +35,21 @@
         <div class="card_dialog-text-container">
           <p class="card_dialog-text nochlejka_dialog">Странно, это место выглядит давно заброшенным… Кажется, мы шли по
             ложному следу. Придется начинать расследование сначала!</p>
-          <a href="https://www.afisha.ru/movie/hitrovka-znak-chetyreh-273847/" class="ticket-link">Купить билет</a>
+          <div class="links-wrapper">
+            <a href="https://www.afisha.ru/movie/hitrovka-znak-chetyreh-273847/" class="ticket-link">Купить билет</a>
+            <a class="restart-link" href="/">Пройти еще раз</a>
+          </div>
         </div>
         <!--TODO: кнопки на втором этапе-->
       </div>
       <div class="card_videoblock mobile">
-        <iframe src="https://www.youtube.com/embed/qAhBAJ5E0Qs"></iframe>
+        <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none';this.nextElementSibling.querySelector('iframe').src='https://www.youtube.com/embed/qAhBAJ5E0Qs'">
+          <img src="./img/nochlejka/Rectangle8.webp" style="cursor:pointer" />
+          <img class="play" src="./img/Vector.svg" alt="img">
+        </div>
+        <div style="display:none; width: 100%;">
+            <iframe></iframe>
+        </div>
       </div>
     </div>
     <div class="card_label">

@@ -20,7 +20,10 @@ window.addEventListener('load', function () {
     for (let i = 0; i < persons.length; i++) {
       if('ontouchstart' in window || navigator.msMaxTouchPoints){
         persons[i].onclick = function () {
-          document.querySelector('.hero_description').style.display = 'block'
+          const dialog = document.querySelector('.hero_description')
+          dialog.style.display = 'block'
+          dialog.style.left = '50%'
+          dialog.style.transform = 'translate(-50%, 0)'
           const title = document.querySelector('.hero_description .hero-title')
           const text = document.querySelector('.hero_description .hero-subtitle')
           const mapLink = document.querySelector('.main_link')
