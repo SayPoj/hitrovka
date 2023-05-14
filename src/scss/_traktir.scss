@@ -90,6 +90,9 @@
 
     .card_label {
       margin: 0 auto 0 auto;
+      @media (max-aspect-ratio: 1/1) {
+        margin: 30vmin auto 0 auto;
+      }
     }
   }
 }

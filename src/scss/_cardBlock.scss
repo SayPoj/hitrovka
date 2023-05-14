@@ -142,7 +142,8 @@
 
     @media (max-aspect-ratio: 1/1) {
       position: absolute;
-      bottom: 10%;
+      top: 70%;
+      margin: 0!important;
       width: 90vw;
     }
   }
